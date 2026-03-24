@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-dark: #0D1B2A;
+  --color-brand-mid: #1B3A5B;
+  --color-brand-accent: #2E86DE;
+  --color-black: #000000;
+  --color-black-soft: #111111;
+  --color-white: #FFFFFF;
+  --color-gray-light: #D9D9D9;
+  --color-gray-metallic: #C0C0C0;
+
+  /* Fonts — applied via next/font className */
+  --font-heading: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-body: var(--font-poppins), "Poppins", sans-serif;
+}
+
+/* ── Base ── */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-black-soft);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-brand-accent);
+  color: var(--color-white);
+}
+
+/* ── Utility classes ── */
+
+.heading-font {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.gradient-dark {
+  background: linear-gradient(180deg, var(--color-brand-dark) 0%, var(--color-black-soft) 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, var(--color-black) 0%, var(--color-brand-dark) 50%, var(--color-brand-mid) 100%);
+}
+
+.gradient-section {
+  background: linear-gradient(180deg, var(--color-black-soft) 0%, var(--color-brand-dark) 50%, var(--color-black-soft) 100%);
+}
+
+.glass-card {
+  background: rgba(13, 27, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(46, 134, 222, 0.15);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(46, 134, 222, 0.4);
+  box-shadow: 0 0 20px rgba(46, 134, 222, 0.1);
+}
+
+.glow-accent {
+  box-shadow: 0 0 30px rgba(46, 134, 222, 0.15);
+}
+
+/* ── Animations ── */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(46, 134, 222, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(46, 134, 222, 0.6);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ── Scrollbar ── */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-black-soft);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-mid);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-accent);
+}
