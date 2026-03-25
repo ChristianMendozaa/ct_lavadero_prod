@@ -8,7 +8,7 @@ export const siteConfig = {
   tagline: "Lavado automotriz con atención al detalle",
   city: "El Alto",
   zone: "El Alto",
-  address: "[Insertar Dirección Física Real. Ej: Av. Juan Pablo II, esq. Cruz Papal]",
+  address: "Av. Julio Cesar Valdez, esq. América, frente a la Plaza Alarcon",
   whatsapp: "59176037650",
   phone: "59176037650",
   hours: "Lunes a Domingo, de 08:00 a 18:00",
