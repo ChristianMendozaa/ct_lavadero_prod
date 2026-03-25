@@ -36,7 +36,7 @@ Usan el evento estándar **`select_content`**.
 | Componente | Parámetros Enviados | Criterio de Disparo |
 | :--- | :--- | :--- |
 | **Hero** | `content_type: 'link'`, `item_id: 'ver_servicios'` | Clic al botón secundario |
-| **Gallery** | `content_type: 'image'`, `item_id: <alt_text>` | Clic sobre una imagen (abre lightbox) |
+| **Benefits (Carrusel)** | `content_type: 'image'`, `item_id: <alt_text>` | Clic sobre una imagen (abre lightbox) |
 
 ### Eventos Secundarios (Custom)
 
@@ -44,8 +44,13 @@ Miden interacción o interés específico.
 
 | Nombre | Parámetros Enviados | Criterio de Disparo |
 | :--- | :--- | :--- |
-| **`vista_galeria`** | `section: 'galeria'` | Al hacer scroll y hacer visible el **50% de la galería** (IntersectionObserver). Evita falsos positivos en render inicial. |
+| **`vista_galeria`** | `section: 'beneficios_evidencia'` | Al hacer scroll y hacer visible el **50% del carrusel en Beneficios** (IntersectionObserver). Evita falsos positivos en render inicial. (Nota: Conserva el nombre de evento legado `vista_galeria` por continuidad analítica). |
 | **`clic_mapa`** | `location: 'contacto'` | Al hacer clic en el enlace "Abrir en Google Maps". |
+
+## Integración de Vercel (Performance y Analítica)
+Además de GA4, el proyecto exporta métricas nativas directamente al panel de Vercel:
+1. **Vercel Analytics** (`@vercel/analytics`): Mide visitantes únicos y vistas de página con total privacidad, sin necesidad de configuración extra (inyectado globalmente en `layout.tsx`).
+2. **Speed Insights** (`@vercel/speed-insights`): Envía métricas reales de Core Web Vitals (FCP, LCP, CLS, FID) desde los dispositivos de los usuarios hacia Vercel, permitiendo diagnósticos exactos de performance.
 
 ## Lista de Comprobación (QA / Pruebas)
 

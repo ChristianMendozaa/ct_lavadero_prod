@@ -8,9 +8,9 @@ export const siteConfig = {
   tagline: "Lavado automotriz con atención al detalle",
   city: "El Alto",
   zone: "El Alto",
-  address: "El Alto",
-  whatsapp: "76037650",
-  phone: "76037650",
+  address: "[Insertar Dirección Física Real. Ej: Av. Juan Pablo II, esq. Cruz Papal]",
+  whatsapp: "59176037650",
+  phone: "59176037650",
   hours: "Lunes a Domingo, de 08:00 a 18:00",
   mapsUrl: "https://www.google.com/maps?q=-16.5164328,-68.1765895&z=17&hl=es",
   googleMapsEmbed: '<iframe src="https://maps.google.com/maps?q=-16.5164328,-68.1765895&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>',
@@ -21,9 +21,9 @@ export const siteConfig = {
   siteUrl: "https://victorialavadero.com",
 
   seo: {
-    title: "Victoria Lavadero — El Mejor Lavado Automotriz y Car Wash en El Alto",
+    title: "Victoria Lavadero — Detalle Automotriz y Lavado Premium en El Alto",
     description:
-      "El mejor servicio de lavado automotriz en El Alto. Aspirado, lavado de chasis, fumigado, limpieza de motor y detalle de interiores. ¡Agenda por WhatsApp al 76037650! Resultados visibles y atención al detalle.",
+      "Servicio profesional de estética y lavado automotriz en El Alto. Especialistas en limpieza de motor, lavado de chasis, aspirado profundo y detalle de interiores. Agenda tu cita y asegura resultados impecables.",
     ogImage: "/og-image.png",
   },
 
