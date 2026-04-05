@@ -18,7 +18,7 @@ export const siteConfig = {
   facebook: "",
   tiktok: "",
   priceRange: "",
-  siteUrl: "https://ct-lavadero.vercel.app",
+  siteUrl: "https://victorialavadero.com",
 
   seo: {
     title: "Victoria Lavadero — Detalle Automotriz y Lavado Premium en El Alto",
