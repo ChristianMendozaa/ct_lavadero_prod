@@ -1,12 +1,13 @@
-import { MetadataRoute } from 'next'
-import { siteConfig } from '@/lib/site-config'
+import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+  const isIndexingAllowed = process.env.ALLOW_INDEXING === 'true';
+
   return {
     rules: {
       userAgent: '*',
-      allow: '/',
+      allow: isIndexingAllowed ? '/' : undefined,
+      disallow: isIndexingAllowed ? undefined : '/',
     },
-    sitemap: `${siteConfig.siteUrl}/sitemap.xml`,
-  }
+  };
 }
